@@ -1,0 +1,222 @@
+
+/* ===== CONFIGURACION GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f2f2f2;
+
+    background:
+        linear-gradient(
+            rgba(15, 19, 22, 0.52),
+            rgba(15, 19, 22, 0.52)
+        ),
+        url("../assets/fondo-costura.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===== PANEL PRINCIPAL ===== */
+.login-container {
+    width: 100%;
+    max-width: 380px;
+    padding: 24px 24px 20px;
+
+    background: #1c2125;
+    border: 1px solid #30373c;
+    border-radius: 6px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+}
+
+/* ===== LOGO ===== */
+.logo-container {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    max-width: 270px;
+    height: 105px;
+
+    object-fit: contain;
+    margin: 0 auto;
+
+    border: none;
+    background: transparent;
+}
+
+/* No mostrar un segundo nombre si ya aparece en el logo */
+.logo-container h1 {
+    display: none;
+}
+
+.logo-container p {
+    display: none;
+}
+
+/* ===== FORMULARIO ===== */
+.login-form {
+    width: 100%;
+    padding: 22px;
+
+    background: #202529;
+    border: 1px solid #383f44;
+    border-radius: 7px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #d5d9dc;
+    font-size: 12px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+
+    color: #ffffff;
+    background: #30363b;
+
+    border: 1px solid #454d52;
+    border-radius: 5px;
+    outline: none;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #a6adb2;
+}
+
+.form-group input:focus {
+    border-color: #56c1e2;
+    box-shadow: 0 0 0 2px rgba(86, 193, 226, 0.12);
+}
+
+/* ===== MENSAJES ===== */
+#loginMessage {
+    color: #ef8497;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* ===== BOTON DE ACCESO ===== */
+#btnLogin {
+    width: 100%;
+    height: 40px;
+    margin-top: 2px;
+
+    color: #17252b;
+    background: #55bfdf;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#btnLogin:hover {
+    background: #72cde8;
+}
+
+#btnLogin:active {
+    background: #39a8ca;
+}
+
+/* ===== ENLACES ===== */
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.login-links a {
+    color: #83b8ca;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    color: #5cc6e6;
+    text-decoration: underline;
+}
+
+/* ===== RECORDAR SESION ===== */
+.remember-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 17px;
+}
+
+.remember-container input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+
+    accent-color: #55bfdf;
+    cursor: pointer;
+}
+
+.remember-container label {
+    color: #d5d9dc;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* ===== VENTANAS PEQUENAS ===== */
+@media (max-width: 420px) {
+    body {
+        padding: 12px;
+    }
+
+    .login-container {
+        padding: 20px 16px;
+    }
+
+    .login-form {
+        padding: 17px;
+    }
+
+    .logo {
+        height: 90px;
+    }
+
+    .login-links a {
+        font-size: 10px;
+    }
+}
